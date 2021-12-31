@@ -1,13 +1,13 @@
 {
-    "name": "logo-scrape",
-    "version": "1.1.0",
+    "name": "@lyuboslavlyubenov/logo-scrape",
+    "version": "1.2.0",
     "description": "Scrapes/Crawls the logo from a provided url(s)/website for your Node.js applications.",
     "author": "Fritz Hoste <hoste.fritz@gmail.com>",
     "main": "dist/index.js",
     "types": "types/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/FritzH321/logo-scrape.git"
+        "url": "https://github.com/LyuboslavLyubenov/logo-scrape.git"
     },
     "dependencies": {
         "cheerio": "^1.0.0-rc.2",
@@ -26,9 +26,12 @@
         "typedoc": "^0.14.2",
         "typescript": "^3.3.3333"
     },
+    "engines": {
+        "node": "v12.18.1"
+    },
     "scripts": {
         "start-example": "npm run build && ts-node ./examples/test.ts",
-        "prepare": "npm run lint && npm run build && npm run doc && npm run before-stage",
+        "prepare": "npm run build && npm run doc && npm run before-stage",
         "lint": "tslint -p .",
         "lint-fix": "tslint -p . --fix",
         "build": "node clean-dist.js && tsc",

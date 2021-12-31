@@ -44,6 +44,8 @@ export class ImageSearch {
     const correctLogos: ImageData[] = logos.map((image: any) => {
       return !Helpers.validUrl(image.url) &&
       image.passChecking !== true &&
+      image.url && 
+      image.url.indexOf && 
       image.url.indexOf('data:') === -1
         ? { ...image, url: Helpers.concatUrl(response.url, image.url) }
         : image;
